@@ -1,0 +1,1 @@
+Spree::Variant.include SolidusWeightsUnits::VariantWeightsUnitsConcern

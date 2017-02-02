@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202094135) do
+ActiveRecord::Schema.define(version: 20170202112209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1130,6 +1130,7 @@ ActiveRecord::Schema.define(version: 20170202094135) do
     t.integer  "tax_category_id"
     t.datetime "updated_at"
     t.datetime "created_at"
+    t.string   "weight_unit"
     t.index ["position"], name: "index_spree_variants_on_position", using: :btree
     t.index ["product_id"], name: "index_spree_variants_on_product_id", using: :btree
     t.index ["sku"], name: "index_spree_variants_on_sku", using: :btree
