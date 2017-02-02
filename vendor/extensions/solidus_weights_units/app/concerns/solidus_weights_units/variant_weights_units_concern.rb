@@ -10,7 +10,15 @@ module SolidusWeightsUnits
         "ounces"
       ]
 
+      STANDARD_WEIGHT_UNIT = "grams"
+
       validates :display_weight_unit, inclusion: { in: WEIGHT_UNITS + [nil] }
+    end
+
+    def display_weight
+      result = UnitConverter.new(value: weight, unit: STANDARD_WEIGHT_UNIT).
+                             to(display_weight_unit)
+      "#{result.round(2)} #{display_weight_unit}"
     end
   end
 end

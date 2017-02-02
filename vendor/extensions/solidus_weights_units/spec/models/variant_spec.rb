@@ -17,6 +17,10 @@ RSpec.describe Spree::Variant, type: :model do
       expect(Spree::Variant::WEIGHT_UNITS).to be_kind_of(Array)
     end
 
+    it "has a a standard weight value" do
+      expect(Spree::Variant::STANDARD_WEIGHT_UNIT).to be_kind_of(String)
+    end
+
     it "allows whitelisted values" do
       unit = Spree::Variant::WEIGHT_UNITS.first
       expect(unit).to be_present
@@ -27,6 +31,16 @@ RSpec.describe Spree::Variant, type: :model do
     it "does not allow any value" do
       subject.display_weight_unit = "unknown_unit"
       expect(subject).to_not be_valid
+    end
+  end
+
+  describe "#display_weight" do
+    it "returns the readable weight in the original unit" do
+      subject.display_weight_unit = "lbs"
+      subject.weight = 45368.31 # 100.02 lbs in grams
+      subject.save!
+
+      expect(subject.display_weight).to eq("100.02 lbs")
     end
   end
 end
