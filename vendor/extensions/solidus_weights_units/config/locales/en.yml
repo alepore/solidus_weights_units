@@ -2,10 +2,10 @@ en:
   activerecord:
     attributes:
       spree/variant:
-        weight_unit: Weight unit
+        display_weight_unit: Display Weight unit
   spree:
     hints:
       spree/product:
-        weight_unit: The unit of this variant weight
+        display_weight_unit: The displayed unit of this variant weight
       spree/variant:
-        weight_unit: The unit of this variant weight
+        display_weight_unit: The displayed unit of this variant weight

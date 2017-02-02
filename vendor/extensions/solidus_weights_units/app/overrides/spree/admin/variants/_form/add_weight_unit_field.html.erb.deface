@@ -2,11 +2,11 @@
 <fieldset class="no-border-top no-border-bottom">
   <div class="row">
     <div class="col-xs-3">
-      <div class="field" data-hook="weight_unit">
-        <%= f.label :weight_unit, Spree::Variant.human_attribute_name(:weight_unit) %>
-        <%= f.field_hint :weight_unit %>
+      <div class="field" data-hook="display_weight_unit">
+        <%= f.label :display_weight_unit, Spree::Variant.human_attribute_name(:display_weight_unit) %>
+        <%= f.field_hint :display_weight_unit %>
         <br>
-        <%= f.select(:weight_unit, Spree::Variant::WEIGHT_UNITS,
+        <%= f.select(:display_weight_unit, Spree::Variant::WEIGHT_UNITS,
                                    { include_blank: Spree.t('match_choices.none') },
                                    { class: 'select2' }) %>
       </div>

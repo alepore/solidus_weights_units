@@ -10,7 +10,7 @@ module SolidusWeightsUnits
         "ounces"
       ]
 
-      validates :weight_unit, inclusion: { in: WEIGHT_UNITS + [nil] }
+      validates :display_weight_unit, inclusion: { in: WEIGHT_UNITS + [nil] }
     end
   end
 end

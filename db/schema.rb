@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202112209) do
+ActiveRecord::Schema.define(version: 20170202145500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1115,22 +1115,22 @@ ActiveRecord::Schema.define(version: 20170202112209) do
   end
 
   create_table "spree_variants", force: :cascade do |t|
-    t.string   "sku",                                      default: "",    null: false
-    t.decimal  "weight",          precision: 8,  scale: 2, default: "0.0"
-    t.decimal  "height",          precision: 8,  scale: 2
-    t.decimal  "width",           precision: 8,  scale: 2
-    t.decimal  "depth",           precision: 8,  scale: 2
+    t.string   "sku",                                          default: "",    null: false
+    t.decimal  "weight",              precision: 8,  scale: 2, default: "0.0"
+    t.decimal  "height",              precision: 8,  scale: 2
+    t.decimal  "width",               precision: 8,  scale: 2
+    t.decimal  "depth",               precision: 8,  scale: 2
     t.datetime "deleted_at"
-    t.boolean  "is_master",                                default: false
+    t.boolean  "is_master",                                    default: false
     t.integer  "product_id"
-    t.decimal  "cost_price",      precision: 10, scale: 2
+    t.decimal  "cost_price",          precision: 10, scale: 2
     t.integer  "position"
     t.string   "cost_currency"
-    t.boolean  "track_inventory",                          default: true
+    t.boolean  "track_inventory",                              default: true
     t.integer  "tax_category_id"
     t.datetime "updated_at"
     t.datetime "created_at"
-    t.string   "weight_unit"
+    t.string   "display_weight_unit"
     t.index ["position"], name: "index_spree_variants_on_position", using: :btree
     t.index ["product_id"], name: "index_spree_variants_on_product_id", using: :btree
     t.index ["sku"], name: "index_spree_variants_on_sku", using: :btree
