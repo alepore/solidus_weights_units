@@ -26,3 +26,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem 'solidus', '~> 2.1.0'
+gem 'solidus_auth_devise'
