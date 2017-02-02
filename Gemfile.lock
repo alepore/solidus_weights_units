@@ -2,6 +2,7 @@ PATH
   remote: vendor/extensions
   specs:
     solidus_weights_units (0.0.1)
+      deface (~> 1.0)
       solidus_core (~> 2.0)
 
 GEM

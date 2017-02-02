@@ -1,0 +1,11 @@
+it:
+  activerecord:
+    attributes:
+      spree/variant:
+        weight_unit: "Unità peso"
+  spree:
+    hints:
+      spree/product:
+        weight_unit: "L'unità di misura del peso di questa variante"
+      spree/variant:
+        weight_unit: "L'unità di misura del peso di questa variante"

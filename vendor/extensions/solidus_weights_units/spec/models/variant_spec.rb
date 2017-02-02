@@ -28,6 +28,5 @@ RSpec.describe Spree::Variant, type: :model do
       subject.weight_unit = "unknown_unit"
       expect(subject).to_not be_valid
     end
-
   end
 end

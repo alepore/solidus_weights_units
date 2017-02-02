@@ -12,6 +12,5 @@ module SolidusWeightsUnits
 
       validates :weight_unit, inclusion: { in: WEIGHT_UNITS + [nil] }
     end
-
   end
 end

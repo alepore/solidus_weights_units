@@ -1,0 +1,1 @@
+Spree::Product.include SolidusWeightsUnits::ProductWeightsUnitsConcern
