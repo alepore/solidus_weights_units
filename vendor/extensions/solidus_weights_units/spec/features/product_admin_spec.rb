@@ -20,6 +20,6 @@ RSpec.feature "Product admin", type: :feature do
     fill_in("product_weight", with: 100.02)
     click_button Spree.t('actions.update')
 
-    expect(product.reload.weight).to eq(45368.31)
+    expect(product.reload.weight).to eq(45_368.31)
   end
 end

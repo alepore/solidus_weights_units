@@ -37,7 +37,7 @@ RSpec.describe Spree::Variant, type: :model do
   describe "#display_weight" do
     it "returns the readable weight in the original unit" do
       subject.display_weight_unit = "lbs"
-      subject.weight = 45368.31 # 100.02 lbs in grams
+      subject.weight = 45_368.31 # 100.02 lbs in grams
       subject.save!
 
       expect(subject.display_weight).to eq(100.02)

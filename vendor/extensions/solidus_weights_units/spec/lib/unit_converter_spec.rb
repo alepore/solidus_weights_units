@@ -11,8 +11,7 @@ RSpec.describe SolidusWeightsUnits::UnitConverter do
 
   describe "#to" do
     it "works as expected" do
-      expect(subject.new(value: 100.02, unit: "lbs").to("grams")).to eq(45368.3088474)
+      expect(subject.new(value: 100.02, unit: "lbs").to("grams")).to eq(45_368.308_847_4)
     end
   end
-
 end
