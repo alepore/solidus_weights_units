@@ -25,7 +25,10 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'solidus_cmd'
 end
 
 gem 'solidus', '~> 2.1.0'
 gem 'solidus_auth_devise'
+
+gem 'solidus_weights_units', path: 'vendor/extensions'
