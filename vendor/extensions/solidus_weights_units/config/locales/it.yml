@@ -2,10 +2,14 @@ it:
   activerecord:
     attributes:
       spree/variant:
+        weight: Peso (in grams)
         display_weight_unit: "Unità peso visualizzata"
+      spree/product:
+        weight: Peso (in grams)
   spree:
     hints:
       spree/product:
         display_weight_unit: "L'unità di misura del peso che viene visualizzata"
       spree/variant:
         display_weight_unit: "L'unità di misura del peso che viene visualizzata"
+    displayed_weight_html: "Peso visualizzato: <strong>%{value}</strong>"
