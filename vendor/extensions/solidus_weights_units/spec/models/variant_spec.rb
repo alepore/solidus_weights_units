@@ -40,7 +40,7 @@ RSpec.describe Spree::Variant, type: :model do
       subject.weight = 45368.31 # 100.02 lbs in grams
       subject.save!
 
-      expect(subject.display_weight).to eq("100.02 lbs")
+      expect(subject.display_weight).to eq(100.02)
     end
   end
 end

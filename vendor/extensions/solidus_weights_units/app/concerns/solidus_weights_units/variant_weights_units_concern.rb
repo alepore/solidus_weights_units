@@ -18,7 +18,7 @@ module SolidusWeightsUnits
     def display_weight
       result = UnitConverter.new(value: weight, unit: STANDARD_WEIGHT_UNIT).
                              to(display_weight_unit)
-      "#{result.round(2)} #{display_weight_unit}"
+      result.round(2)
     end
   end
 end
