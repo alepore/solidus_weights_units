@@ -1,24 +1,17 @@
-# README
+# Solidus Weights Units
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sample application for the (maybe) `solidus_weights_units` extension.
 
-Things you may want to cover:
+## WAT?
 
-* Ruby version
+This allows to insert variant weights in a specific unit (lbs, grams etc.)
+Weights are converted and saved to the database using the same unit (grams).
+The weight in the original unit can be viewed using `Variant#display_weight`
 
-* System dependencies
+# TODO / QUESTIONS
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- input weight must be well formatted (no wrong dot/commas separators)
+- `Variant#weight` field precision can be expanded to allow > 1ton values
+- not-nil weight unit makes sense, how to handle current weight values migration on existing apps?
+- is overriding the `Variant#weight=` setter a good idea? (probably not until this become the default/core behaviour)
+- why isn't the USA on the metric system?
