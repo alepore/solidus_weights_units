@@ -1,0 +1,1 @@
+Spree::Admin::ProductsController.include SolidusWeightsUnits::ControllerWeightConversionConcern

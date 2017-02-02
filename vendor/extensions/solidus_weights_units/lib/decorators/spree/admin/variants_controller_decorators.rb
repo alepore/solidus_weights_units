@@ -1,0 +1,1 @@
+Spree::Admin::VariantsController.include SolidusWeightsUnits::ControllerWeightConversionConcern

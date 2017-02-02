@@ -13,4 +13,13 @@ RSpec.feature "Variant admin", type: :feature do
 
     expect(variant.reload.display_weight_unit).to eq(unit)
   end
+
+  scenario "the inserted weight gets converted" do
+    visit spree.edit_admin_product_variant_path(variant.product, variant)
+    select("lbs", from: "variant_display_weight_unit")
+    fill_in("variant_weight", with: 100.02)
+    click_button Spree.t('actions.update')
+
+    expect(variant.reload.weight).to eq(45368.31)
+  end
 end
